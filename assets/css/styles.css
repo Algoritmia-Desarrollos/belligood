@@ -1,0 +1,21 @@
+/* Estilos para las pestañas de servicios */
+.tab-button {
+    @apply px-4 py-2 mx-2 text-secondary font-semibold border-b-2 border-transparent transition-colors duration-300;
+}
+
+.tab-button:hover {
+    @apply text-primary;
+}
+
+.active-tab {
+    @apply text-primary border-primary;
+}
+
+/* Clases para mostrar/ocultar el contenido de las pestañas */
+.tab-content {
+    @apply hidden;
+}
+
+.active-content {
+    @apply block;
+}

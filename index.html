@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Belligood Estética - Expertos en Uñas, Láser y Belleza en Móstoles</title>
+    <meta name="description" content="Descubre Belligood, tu centro de estética en Móstoles. Especialistas en manicura, pedicura, depilación láser, tratamientos faciales y corporales. ¡Pide tu cita!">
+    <meta name="keywords" content="estética móstoles, uñas móstoles, manicura, pedicura, láser diodo, depilación láser, limpieza facial, belligood">
+    <meta name="author" content="Belligood Estética">
+
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa4f6',
+                        'secondary': '#979694',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white font-sans text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><div class="h-10 w-40 bg-gray-200 border-2 border-dashed border-gray-400 flex items-center justify-center"><span class="text-sm text-gray-500">Logo Belligood</span></div></a>
+            <ul class="hidden md:flex items-center space-x-8 text-secondary font-semibold">
+                <li><a href="#servicios" class="hover:text-primary transition-colors">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-primary transition-colors">Nosotros</a></li>
+                <li><a href="#galeria" class="hover:text-primary transition-colors">Galería</a></li>
+                <li><a href="/contacto" class="bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-opacity-80 transition-all">Pide Cita</a></li>
+            </ul>
+            <button id="menu-btn" class="md:hidden text-secondary focus:outline-none"><i class="fas fa-bars fa-xl"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#servicios" class="block py-3 px-6 text-sm hover:bg-gray-50">Servicios</a>
+            <a href="#nosotros" class="block py-3 px-6 text-sm hover:bg-gray-50">Nosotros</a>
+            <a href="#galeria" class="block py-3 px-6 text-sm hover:bg-gray-50">Galería</a>
+            <a href="/contacto" class="block py-3 px-6 text-sm bg-gray-100 font-semibold text-primary">Pide Cita</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="h-screen relative flex items-center justify-center">
+            <div class="absolute inset-0 bg-gray-200 border-b-4 border-dashed border-gray-400 flex items-center justify-center"><span class="text-lg text-gray-500 text-center p-4">Imagen de fondo principal de la clínica</span></div>
+            <div class="relative z-10 container mx-auto px-6 text-center text-white bg-black bg-opacity-40 p-10 rounded-xl shadow-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Belleza y Cuidado Profesional</h1>
+                <p class="text-lg md:text-xl mb-8 font-light max-w-2xl mx-auto">El lugar donde tus uñas y tu piel reciben el trato que merecen en el corazón de Móstoles.</p>
+                <a href="/contacto" class="bg-primary text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-80 transition-transform hover:scale-105">Pide tu Cita Ahora</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800">Descubre Nuestros Servicios</h2>
+                    <p class="text-secondary mt-3 text-lg">Explora cada uno de nuestros tratamientos especializados.</p>
+                </div>
+                <div class="flex flex-wrap justify-center border-b border-gray-200 mb-8 -mx-2">
+                    <button data-tab="laser" class="tab-button border-primary text-primary">Láser</button>
+                    <button data-tab="unas" class="tab-button border-transparent text-secondary">Uñas</button>
+                    <button data-tab="corporal" class="tab-button border-transparent text-secondary">Corporal</button>
+                    <button data-tab="facial" class="tab-button border-transparent text-secondary">Facial</button>
+                    <button data-tab="pestanas" class="tab-button border-transparent text-secondary">Pestañas</button>
+                </div>
+                <div class="max-w-4xl mx-auto pt-8">
+                    <div id="laser" class="tab-content"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-4"><h3 class="text-2xl font-bold">Tratamientos Láser</h3><ul class="space-y-3"><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span><strong>Láser Diodo:</strong> Depilación definitiva avanzada.</span></li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span><strong>Fotorejuvenecimiento Facial:</strong> Consigue una piel luminosa, reduce arrugas y manchas.</span></li></ul><p class="text-sm text-gray-500 pt-2">Disponemos de sesiones sueltas y packs de 4 y 8 sesiones.</p></div><div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm p-2 text-center text-gray-500">Foto Tratamiento Láser</span></div></div></div>
+                    <div id="unas" class="tab-content hidden"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-4"><h3 class="text-2xl font-bold">Manicura y Pedicura</h3><ul class="space-y-2 columns-2"><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Semipermanente</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Rusa</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Brasileña</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Esculpida</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Acrílico/Acrigel</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Pedicura Spa</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Pedicura Deluxe</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Pedicura Express</li></ul></div><div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm p-2 text-center text-gray-500">Foto de Manicura</span></div></div></div>
+                    <div id="corporal" class="tab-content hidden"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-4"><h3 class="text-2xl font-bold">Tratamientos Corporales</h3><ul class="space-y-2 columns-2"><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Maderoterapia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Presoterapia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Drenaje Linfático</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Radiofrecuencia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Masaje Caña Bambú</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Masaje Brasileño</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Vendas Frías</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Chocolaterapia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Piedras Calientes</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Vacuterapia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Cavitación</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Depilación con Cera</li></ul></div><div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm p-2 text-center text-gray-500">Foto Tratamiento Corporal</span></div></div></div>
+                    <div id="facial" class="tab-content hidden"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-4"><h3 class="text-2xl font-bold">Tratamientos Faciales</h3><ul class="space-y-2 columns-2"><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Limpieza Facial</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Hidratación</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Tratamiento Acné</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Alta Frecuencia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Radiofrecuencia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Dermapen</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Oxigenoterapia</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Maderoterapia Facial</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-2"></i>Microdermoabrasión</li></ul></div><div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm p-2 text-center text-gray-500">Foto Tratamiento Facial</span></div></div></div>
+                    <div id="pestanas" class="tab-content hidden"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-4"><h3 class="text-2xl font-bold">Pestañas</h3><ul class="space-y-3"><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i>Lifting de Pestañas</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i>Extensiones Pelo a Pelo</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i>Pestañas Volumen Ruso</li><li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i>Pestañas Megavolumen</li></ul></div><div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm p-2 text-center text-gray-500">Foto de Pestañas</span></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="w-full aspect-video bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-center text-gray-500 p-4">Foto del interior de la clínica o del equipo</span></div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Bienvenida a Belligood</h2>
+                    <p class="text-secondary mb-4 text-lg leading-relaxed">En Belligood, nuestra pasión es tu bienestar. Somos un centro de estética moderno y acogedor en el corazón de Móstoles, dedicado a ofrecerte los mejores tratamientos con productos de alta calidad y un equipo profesional que te hará sentir como en casa.</p>
+                    <p class="text-secondary leading-relaxed">Nuestra misión es clara: que te sientas y te veas espectacular. Te invitamos a descubrir una experiencia de belleza única.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-8">Conoce Nuestro Centro</h2>
+                <div class="w-full max-w-4xl mx-auto aspect-video bg-black border-2 border-dashed border-gray-500 rounded-lg flex items-center justify-center shadow-2xl"><div class="text-center"><i class="fas fa-play-circle fa-5x text-gray-400 hover:text-white transition-colors cursor-pointer mb-4"></i><span class="text-lg text-gray-400">Placeholder para el Video del Centro</span></div></div>
+            </div>
+        </section>
+
+        <section id="galeria" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl font-bold text-gray-800 mb-12">Nuestro Trabajo</h2>
+                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm text-center text-gray-500 p-2">Foto de Manicura</span></div>
+                    <div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm text-center text-gray-500 p-2">Foto de Pedicura</span></div>
+                    <div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm text-center text-gray-500 p-2">Foto de cabina Láser</span></div>
+                    <div class="aspect-square bg-gray-200 border-2 border-dashed rounded-lg flex items-center justify-center"><span class="text-sm text-center text-gray-500 p-2">Foto de tratamiento Facial</span></div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6 text-center"><div class="h-12 w-48 bg-gray-700 border-2 border-dashed border-gray-500 flex items-center justify-center mx-auto mb-6"><span class="text-sm text-gray-400">Logo Belligood (versión blanco)</span></div>
+            <p class="text-secondary mb-4">Calle Orquidea 2, Móstoles</p>
+            <p class="text-secondary mb-6">belligoodmgmt2@gmail.com | 659 30 63 94</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.instagram.com/belligood_estetica/" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/@belli.good" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-tiktok fa-2x"></i></a>
+            </div>
+            <div class="text-sm text-secondary space-x-4">
+                <a href="/aviso-legal" class="hover:text-white">Aviso Legal</a><span>/</span><a href="/politica-privacidad" class="hover:text-white">Políticas de Privacidad</a><span>/</span><a href="/politica-cookies" class="hover:text-white">Políticas de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110"><i class="fab fa-whatsapp fa-2x"></i></a>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
