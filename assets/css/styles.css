@@ -1,21 +1,98 @@
+/* assets/css/styles.css */
+
+/* 1. Variables Globales y Estilos Base
+-------------------------------------------------- */
+:root {
+    --color-primary: #f5a5c0;
+    --color-secondary: #888888;
+    --color-light-pink: #FFF8FB;
+    --color-dark-text: #333333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark-text);
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 2. Componentes Reutilizables (Botones)
+-------------------------------------------------- */
+.btn {
+    @apply py-3 px-8 rounded-md font-bold transition-all duration-300 inline-block;
+}
+
+.btn-primary {
+    @apply bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary;
+}
+
+.btn-primary-outline {
+     @apply bg-transparent text-white border-2 border-white hover:bg-primary hover:border-primary;
+}
+
+
+/* 3. Estilos Específicos de Secciones
+-------------------------------------------------- */
+
+/* Efecto para la imagen principal (Hero) */
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.60));
+    z-index: 10;
+}
+
 /* Estilos para las pestañas de servicios */
 .tab-button {
-    @apply px-4 py-2 mx-2 text-secondary font-semibold border-b-2 border-transparent transition-colors duration-300;
+    @apply px-4 py-2 mx-2 font-semibold border-b-2 border-transparent transition-colors duration-300;
+    color: var(--color-secondary);
 }
 
 .tab-button:hover {
-    @apply text-primary;
+    color: var(--color-primary);
 }
 
 .active-tab {
-    @apply text-primary border-primary;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
-/* Clases para mostrar/ocultar el contenido de las pestañas */
 .tab-content {
     @apply hidden;
 }
 
 .active-content {
     @apply block;
+}
+
+/* 4. Configuración de Tailwind (para referencia en el editor)
+   Esto se aplica a través del CDN, pero es útil tenerlo aquí.
+-------------------------------------------------- */
+@config {
+    theme: {
+        extend: {
+            colors: {
+                'primary': '#f5a5c0',
+                'secondary': '#888888',
+                'light-pink': '#FFF8FB',
+                'dark-text': '#333333'
+            },
+            fontFamily: {
+                'sans': ['Poppins', 'sans-serif'],
+                'serif': ['Lora', 'serif']
+            }
+        }
+    }
 }
