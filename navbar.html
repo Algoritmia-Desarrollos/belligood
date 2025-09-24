@@ -1,0 +1,51 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="/">
+            <img src="/assets/images/logotrans.png" alt="Logo Belligood Estética" class="h-12">
+        </a>
+        
+        <ul class="hidden md:flex items-center space-x-8 text-secondary font-semibold">
+            <li class="relative group">
+                <a href="/#servicios" class="py-4 hover:text-primary transition-colors flex items-center cursor-pointer">
+                    Servicios
+                    <i class="fas fa-chevron-down text-xs ml-2"></i>
+                </a>
+                
+                <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-48 z-50">
+                    <a href="/laser" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white transition-colors duration-200">Láser</a>
+                    <a href="/unas" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white transition-colors duration-200">Uñas</a>
+                    <a href="/corporal" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white transition-colors duration-200">Corporal</a>
+                    <a href="/facial" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white transition-colors duration-200">Facial</a>
+                    <a href="/pestanas" class="block px-4 py-2 text-sm text-secondary hover:bg-primary hover:text-white transition-colors duration-200">Pestañas</a>
+                </div>
+            </li>
+            
+            <li><a href="/nosotros" class="py-4 hover:text-primary transition-colors">Nosotros</a></li>
+            <li><a href="/galeria" class="py-4 hover:text-primary transition-colors">Galería</a></li>
+            <li><a href="/contacto" class="py-4 hover:text-primary transition-colors">Contacto</a></li>
+            <li><a href="/contacto" class="bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-opacity-80 transition-all">Pide Cita</a></li>
+        </ul>
+        
+        <button id="menu-btn" class="md:hidden text-secondary focus:outline-none"><i class="fas fa-bars fa-xl"></i></button>
+    </nav>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div>
+            <button id="servicios-toggle" class="w-full text-left py-3 px-6 text-sm flex justify-between items-center">
+                <span>Servicios</span>
+                <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div id="servicios-submenu-mobile" class="hidden pl-8">
+                <a href="/laser" class="block py-2 px-6 text-sm text-secondary hover:bg-gray-50">Láser</a>
+                <a href="/unas" class="block py-2 px-6 text-sm text-secondary hover:bg-gray-50">Uñas</a>
+                <a href="/corporal" class="block py-2 px-6 text-sm text-secondary hover:bg-gray-50">Corporal</a>
+                <a href="/facial" class="block py-2 px-6 text-sm text-secondary hover:bg-gray-50">Facial</a>
+                <a href="/pestanas" class="block py-2 px-6 text-sm text-secondary hover:bg-gray-50">Pestañas</a>
+            </div>
+        </div>
+        <a href="/nosotros" class="block py-3 px-6 text-sm hover:bg-gray-50">Nosotros</a>
+        <a href="/galeria" class="block py-3 px-6 text-sm hover:bg-gray-50">Galería</a>
+        <a href="/contacto" class="block py-3 px-6 text-sm hover:bg-gray-50">Contacto</a>
+        <a href="/contacto" class="block py-3 px-6 text-sm bg-gray-100 font-semibold text-primary">Pide Cita</a>
+    </div>
+</header>

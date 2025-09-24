@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sobre Nosotros - Conoce Belligood Estética en Móstoles</title>
+    <meta name="description" content="Descubre la filosofía de Belligood, un centro de estética moderno y acogedor en Móstoles, creado para tu bienestar y belleza. Conoce a nuestro equipo profesional.">
+    <meta name="keywords" content="centro de estética móstoles, sobre belligood, equipo estética, filosofía belligood">
+    
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa4f6',
+                        'secondary': '#979694',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white font-sans text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div id="navbar-placeholder"></div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+             <a href="/#servicios" class="block py-3 px-6 text-sm hover:bg-gray-50">Servicios</a>
+             <a href="/nosotros" class="block py-3 px-6 text-sm hover:bg-gray-50">Nosotros</a>
+             <a href="/#galeria" class="block py-3 px-6 text-sm hover:bg-gray-50">Galería</a>
+             <a href="/contacto" class="block py-3 px-6 text-sm bg-gray-100 font-semibold text-primary">Pide Cita</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="h-[60vh] relative flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/images/facial.webp');">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative z-10 container mx-auto px-6 text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Nuestra Pasión es tu Bienestar</h1>
+                <p class="text-lg md:text-xl mt-4 font-light max-w-2xl mx-auto">Somos Belligood, un espacio creado para cuidarte, mimarte y realzar tu belleza.</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-bold mb-4">Bienvenida a tu Espacio</h2>
+                    <p class="text-secondary mb-4 text-lg leading-relaxed">En Belligood, creemos que la belleza es una expresión de bienestar interior. Por eso, hemos creado más que un centro de estética: un refugio moderno y acogedor en el corazón de Móstoles, donde cada detalle está pensado para que te sientas como en casa.</p>
+                    <p class="text-secondary leading-relaxed">Nuestra misión es clara: que te sientas y te veas espectacular. Combinamos las técnicas más avanzadas, productos de la más alta calidad y un equipo de profesionales apasionados por su trabajo para ofrecerte una experiencia única y resultados que superen tus expectativas.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="/assets/images/local (2).webp" alt="Recepción de Belligood" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12">Nuestros Pilares</h2>
+                <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-medal fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Calidad Profesional</h3>
+                        <p class="text-secondary">Utilizamos solo productos de marcas líderes y la tecnología más avanzada para garantizarte los mejores resultados con total seguridad.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hand-holding-heart fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Atención Personalizada</h3>
+                        <p class="text-secondary">Cada cliente es único. Escuchamos tus necesidades y te asesoramos para diseñar un plan de tratamientos a tu medida.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-spa fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Ambiente Relajante</h3>
+                        <p class="text-secondary">Queremos que tu visita sea un momento de desconexión. Disfruta de nuestras instalaciones pensadas para tu máximo confort y relax.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="galeria-centro" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl font-bold text-gray-800 mb-12">Conoce Nuestro Centro</h2>
+                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <img src="/assets/images/local (1).webp" alt="Mesas de manicura en Belligood" class="rounded-lg shadow-md aspect-video object-cover w-full h-full">
+                    <img src="/assets/images/corporal (6).webp" alt="Productos y ambiente de Belligood" class="rounded-lg shadow-md aspect-video object-cover w-full h-full">
+                    <img src="/assets/images/corporal (5).webp" alt="Herramientas profesionales de maderoterapia" class="rounded-lg shadow-md aspect-video object-cover w-full h-full">
+                 </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-primary">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-3xl font-bold mb-4">¿Quieres vivir la experiencia Belligood?</h2>
+                <p class="mb-8 text-lg max-w-2xl mx-auto">Estaremos encantadas de recibirte y asesorarte. ¡Tu viaje hacia el bienestar comienza aquí!</p>
+                <a href="/contacto" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform hover:scale-105 inline-block">Contacta con Nosotras</a>
+            </div>
+        </section>
+    </main>
+
+   <div id="footer-placeholder"></div>
+
+
+    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110"><i class="fab fa-whatsapp fa-2x"></i></a>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

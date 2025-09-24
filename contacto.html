@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contacto - Belligood Estética en Móstoles</title>
+    <meta name="description" content="Contacta con Belligood Estética. Pide tu cita por teléfono, email o a través de nuestro formulario. Nos encontramos en Calle Orquidea 2, Móstoles.">
+    <meta name="keywords" content="contacto estética móstoles, pedir cita belligood, teléfono belligood, ubicación estética">
+    
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa4f6',
+                        'secondary': '#979694',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white font-sans text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div id="navbar-placeholder"></div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+             <a href="/#servicios" class="block py-3 px-6 text-sm hover:bg-gray-50">Servicios</a>
+             <a href="/nosotros" class="block py-3 px-6 text-sm hover:bg-gray-50">Nosotros</a>
+             <a href="/#galeria" class="block py-3 px-6 text-sm hover:bg-gray-50">Galería</a>
+             <a href="/contacto" class="block py-3 px-6 text-sm bg-gray-100 font-semibold text-primary">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Contacta con Nosotros</h1>
+                <p class="text-lg mt-4 text-secondary max-w-2xl mx-auto">¿Tienes alguna duda o quieres reservar tu cita? Estamos aquí para ayudarte.</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Información de Contacto</h2>
+                        <div class="space-y-3 text-lg text-secondary">
+                            <p class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-primary"></i>Calle Orquidea 2, Móstoles</p>
+                            <p class="flex items-center"><i class="fas fa-phone-alt w-6 text-primary"></i>659 30 63 94 / 916 64 62 51</p>
+                            <p class="flex items-center"><i class="fas fa-envelope w-6 text-primary"></i>belligoodmgmt2@gmail.com</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Síguenos en Redes</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/belligood_estetica/" target="_blank" class="text-secondary hover:text-primary transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="https://www.tiktok.com/@belli.good" target="_blank" class="text-secondary hover:text-primary transition-colors"><i class="fab fa-tiktok fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.697444317666!2d-3.876111084606283!3d40.34861197937295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418c1a6b0b2e8b%3A0x6b4c1a5b6e4b8e8b!2sCalle%20de%20la%20Orqu%C3%ADdea%2C%202%2C%2028933%20M%C3%B3stoles%2C%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1663000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h2 class="text-2xl font-bold mb-6">Envíanos tu Consulta</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
+                                <input type="text" id="apellido" name="apellido" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700">Número de Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="consulta" class="block text-sm font-medium text-gray-700">Consulta</label>
+                            <textarea id="consulta" name="consulta" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-md hover:bg-green-600 transition-all flex items-center justify-center space-x-2">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Enviar por WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <div id="footer-placeholder"></div>
+
+
+    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 ...">
+        </a>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
