@@ -48,33 +48,33 @@ html {
     content: '';
     position: absolute;
     inset: 0;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.60));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.60)) !important;
     z-index: 10;
 }
 
 /* Estilos para las pestañas de servicios */
 .tab-button {
     @apply px-4 py-2 mx-2 font-semibold border-b-2 border-transparent transition-colors duration-300;
-    color: var(--color-secondary);
+    color: var(--color-secondary) !important;
 }
 
 .tab-button:hover {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .active-tab {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
 }
 
 .tab-content {
-    @apply hidden;
+    @apply hidden !important;
 }
 
 .active-content {
-    @apply block;
+    @apply block !important;
 }
 
 /* 4. Configuración de Tailwind (para referencia en el editor)
