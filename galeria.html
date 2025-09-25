@@ -7,90 +7,69 @@
     <title>Galería de Trabajos - Belligood Estética Móstoles</title>
     <meta name="description" content="Explora nuestra galería de trabajos. Ve fotos de nuestros tratamientos de uñas, faciales y corporales. Inspírate para tu próxima visita a Belligood.">
     <meta name="keywords" content="galería estética, fotos uñas, fotos maderoterapia, antes y después estética, belligood">
-        <link rel="stylesheet" href="/assets/css/styles.css">
-
+    
     <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 'primary': '#f5a5c0', 'secondary': '#979694' },
-                    fontFamily: { 'sans': ['Poppins', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer components {
-            .gallery-filter-button {
-                @apply px-5 py-2 text-sm font-semibold rounded-full transition-colors duration-300;
-            }
-            .gallery-filter-button.active {
-                @apply bg-primary text-white;
-            }
-            .gallery-filter-button:not(.active) {
-                @apply bg-gray-100 text-secondary hover:bg-gray-200;
-            }
-        }
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
-<body class="bg-white font-sans text-gray-800">
+<body>
 
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="bg-gray-50 py-16">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Nuestra Galería</h1>
-                <p class="text-lg mt-4 text-secondary max-w-2xl mx-auto">Un vistazo a la dedicación y el arte que ponemos en cada tratamiento.</p>
+        <section class="gallery-page-header">
+            <div class="container">
+                <h1 class="section-title" style="margin-bottom: 1rem;">Nuestra Galería</h1>
+                <p class="section-subtitle">Un vistazo a la dedicación y el arte que ponemos en cada tratamiento.</p>
             </div>
         </section>
 
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <div id="gallery-filters" class="flex flex-wrap justify-center gap-3 mb-12">
+        <section class="gallery-section" style="padding-top: 5rem;">
+            <div class="container">
+                <div id="gallery-filters" class="gallery-filters">
                     <button class="gallery-filter-button active" data-filter="all">Todos</button>
                     <button class="gallery-filter-button" data-filter="unas">Uñas</button>
                     <button class="gallery-filter-button" data-filter="facial">Facial</button>
                     <button class="gallery-filter-button" data-filter="corporal">Corporal</button>
                 </div>
 
-                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (4).webp" alt="Trabajo de manicura Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (1).webp" alt="Tratamiento facial Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (1).webp" alt="Tratamiento corporal Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (5).webp" alt="Diseño de uñas Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (2).webp" alt="Tecnología facial Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (3).webp" alt="Detalle maderoterapia Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (6).webp" alt="Manicura elegante Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (2).webp" alt="Tratamiento de maderoterapia" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (4).webp" alt="Tratamiento profesional facial" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (1).webp" alt="Uñas amarillas Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (5).webp" alt="Herramientas Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
-                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (2).webp" alt="Uñas azules y naranjas Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full"></div>
+                <div id="gallery-grid" class="gallery-grid full-gallery">
+                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (4).webp" alt="Trabajo de manicura Belligood"></div>
+                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (1).webp" alt="Tratamiento facial Belligood"></div>
+                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (1).webp" alt="Tratamiento corporal Belligood"></div>
+                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (5).webp" alt="Diseño de uñas Belligood"></div>
+                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (2).webp" alt="Tecnología facial Belligood"></div>
+                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (3).webp" alt="Detalle maderoterapia Belligood"></div>
+                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (6).webp" alt="Manicura elegante Belligood"></div>
+                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (2).webp" alt="Tratamiento de maderoterapia"></div>
+                    <div class="gallery-item" data-category="facial"><img src="/assets/images/facial (4).webp" alt="Tratamiento profesional facial"></div>
+                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (1).webp" alt="Uñas amarillas Belligood"></div>
+                    <div class="gallery-item" data-category="corporal"><img src="/assets/images/corporal (5).webp" alt="Herramientas Belligood"></div>
+                    <div class="gallery-item" data-category="unas"><img src="/assets/images/uñas (2).webp" alt="Uñas azules y naranjas Belligood"></div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-primary">
-            <div class="container mx-auto px-6 text-center text-white">
-                <h2 class="text-3xl font-bold mb-4">¿Te has inspirado?</h2>
-                <p class="mb-8 text-lg max-w-2xl mx-auto">Ahora que has visto lo que podemos hacer, es tu turno de brillar. ¡Reserva tu cita con nosotros!</p>
-                <a href="/contacto" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform hover:scale-105 inline-block">Reservar Ahora</a>
+        <section class="cta-section">
+             <div class="container">
+                <h2 class="hero-title" style="font-size: 2rem; color: white;">¿Te has inspirado?</h2>
+                <p class="hero-subtitle" style="color: white;">Ahora que has visto lo que podemos hacer, es tu turno de brillar. ¡Reserva tu cita con nosotros!</p>
+                <a href="/contacto" class="btn" style="background-color: white; color: var(--color-primary);">Reservar Ahora</a>
             </div>
         </section>
     </main>
 
- <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 ...">
+    <a href="https://wa.me/34659306394" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp fa-2x"></i>
     </a>
 
     <script src="/assets/js/main.js"></script>

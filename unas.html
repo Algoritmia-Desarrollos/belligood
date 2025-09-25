@@ -9,108 +9,156 @@
     <meta name="keywords" content="manicura móstoles, pedicura móstoles, uñas semipermanentes, uñas acrílicas, manicura rusa, belligood">
     
     <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
-    <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#f5a5c0',
-                        'secondary': '#979694',
-                    },
-                    fontFamily: {
-                        'sans': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        /* Estilos específicos para esta página */
+        .page-hero {
+            height: 60vh;
+        }
+        .nail-services-section {
+            padding: 5rem 0;
+        }
+        .nail-services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            .nail-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .nail-services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .nail-service-card {
+            background-color: var(--color-gray-50);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .nail-service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        .nail-service-card li {
+            color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .nail-service-card i {
+            margin-right: 0.75rem;
+            color: var(--color-primary);
+        }
+        .cta-section {
+            padding: 5rem 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .cta-section .btn {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+         .cta-section .btn:hover {
+            background-color: var(--color-gray-100);
+        }
+    </style>
 </head>
 
-<body class="bg-white font-sans text-gray-800">
+<body>
 
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="h-[60vh] relative flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/images/uñas (1).webp');">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="relative z-10 container mx-auto px-6 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Manos y Pies Impecables</h1>
-                <p class="text-lg md:text-xl mt-4 font-light max-w-2xl mx-auto">Descubre el arte en tus uñas con nuestros servicios expertos de manicura y pedicura.</p>
+        <section class="hero page-hero" style="background-image: url('/assets/images/uñas (1).webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">Manos y Pies Impecables</h1>
+                    <p class="hero-subtitle">Descubre el arte en tus uñas con nuestros servicios expertos de manicura y pedicura.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800">Nuestros Tratamientos de Uñas</h2>
-                    <p class="text-secondary mt-3 text-lg">Calidad y precisión para un acabado perfecto y duradero.</p>
-                </div>
+        <section class="nail-services-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Tratamientos de Uñas</h2>
+                <p class="section-subtitle">Calidad y precisión para un acabado perfecto y duradero.</p>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Manicuras</h3>
-                        <ul class="space-y-3 text-secondary">
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles mr-3 text-primary"></i>Manicura Semipermanente</li>
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles mr-3 text-primary"></i>Manicura Rusa</li>
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles mr-3 text-primary"></i>Manicura Brasileña</li>
-                            <li class="flex items-center"><i class="fas fa-hand-sparkles mr-3 text-primary"></i>Manicura Esculpida</li>
+                <div class="nail-services-grid">
+                    <div class="nail-service-card">
+                        <h3>Manicuras</h3>
+                        <ul>
+                            <li><i class="fas fa-hand-sparkles"></i>Manicura Semipermanente</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Manicura Rusa</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Manicura Brasileña</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Manicura Esculpida</li>
                         </ul>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Uñas Esculpidas</h3>
-                        <ul class="space-y-3 text-secondary">
-                            <li class="flex items-center"><i class="fas fa-gem mr-3 text-primary"></i>Uñas en Acrílico</li>
-                            <li class="flex items-center"><i class="fas fa-gem mr-3 text-primary"></i>Uñas en Acrigel</li>
-                            <li class="flex items-center text-left"><i class="fas fa-gem mr-3 text-primary"></i>Diseños personalizados y Nail Art</li>
+                    <div class="nail-service-card">
+                        <h3>Uñas Esculpidas</h3>
+                        <ul>
+                            <li><i class="fas fa-gem"></i>Uñas en Acrílico</li>
+                            <li><i class="fas fa-gem"></i>Uñas en Acrigel</li>
+                            <li style="align-items: flex-start;"><i class="fas fa-gem"></i>Diseños personalizados y Nail Art</li>
                         </ul>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Pedicuras</h3>
-                        <ul class="space-y-3 text-secondary">
-                            <li class="flex items-center"><i class="fas fa-shoe-prints mr-3 text-primary"></i>Pedicura Spa Completa</li>
-                            <li class="flex items-center"><i class="fas fa-shoe-prints mr-3 text-primary"></i>Pedicura Deluxe con tratamiento</li>
-                            <li class="flex items-center"><i class="fas fa-shoe-prints mr-3 text-primary"></i>Pedicura Express</li>
+                    <div class="nail-service-card">
+                        <h3>Pedicuras</h3>
+                        <ul>
+                            <li><i class="fas fa-shoe-prints"></i>Pedicura Spa Completa</li>
+                            <li><i class="fas fa-shoe-prints"></i>Pedicura Deluxe con tratamiento</li>
+                            <li><i class="fas fa-shoe-prints"></i>Pedicura Express</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="galeria-unas" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl font-bold text-gray-800 mb-12">Nuestra Galería</h2>
-                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <img src="/assets/images/uñas (2).webp" alt="Diseño de uñas azul y naranja" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
-                    <img src="/assets/images/uñas (4).webp" alt="Diseño de uñas lila" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
-                    <img src="/assets/images/uñas (5).webp" alt="Diseño de uñas amarillo francés" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
-                    <img src="/assets/images/uñas (6).webp" alt="Diseño de uñas nupcial" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
-                    <img src="/assets/images/uñas (1).webp" alt="Diseño de uñas amarillo pastel" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
-                    <img src="/assets/images/uñas (3).webp" alt="Diseño de uñas Belligood" class="rounded-lg shadow-md aspect-square object-cover w-full h-full hover:scale-105 transition-transform cursor-pointer">
+        <section id="galeria-unas" class="gallery-section">
+            <div class="container">
+                 <h2 class="section-title">Nuestra Galería</h2>
+                 <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="gallery-item"><img src="/assets/images/uñas (2).webp" alt="Diseño de uñas azul y naranja"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (4).webp" alt="Diseño de uñas lila"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (5).webp" alt="Diseño de uñas amarillo francés"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (6).webp" alt="Diseño de uñas nupcial"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (1).webp" alt="Diseño de uñas amarillo pastel"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (3).webp" alt="Diseño de uñas Belligood"></div>
                  </div>
             </div>
         </section>
 
-        <section class="py-20 bg-primary">
-            <div class="container mx-auto px-6 text-center text-white">
-                <h2 class="text-3xl font-bold mb-4">¿Lista para unas uñas espectaculares?</h2>
-                <p class="mb-8 text-lg">Tu cita para la manicura o pedicura perfecta te está esperando.</p>
-                <a href="/contacto" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform hover:scale-105 inline-block">Reservar mi Cita</a>
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="hero-title" style="font-size: 2rem; color: white;">¿Lista para unas uñas espectaculares?</h2>
+                <p class="hero-subtitle" style="color: white;">Tu cita para la manicura o pedicura perfecta te está esperando.</p>
+                <a href="/contacto" class="btn">Reservar mi Cita</a>
             </div>
         </section>
     </main>
 
    <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110"><i class="fab fa-whatsapp fa-2x"></i></a>
+    <a href="https://wa.me/34659306394" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
 
     <script src="/assets/js/main.js"></script>
 </body>

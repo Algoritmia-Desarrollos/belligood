@@ -9,107 +9,211 @@
     <meta name="keywords" content="depilación láser móstoles, láser diodo, fotorejuvenecimiento facial, eliminar vello, belligood">
     
     <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
-    <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#f5a5c0',
-                        'secondary': '#979694',
-                    },
-                    fontFamily: {
-                        'sans': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        /* Estilos específicos para esta página */
+        .page-hero {
+            height: 60vh;
+        }
+        .text-section {
+            padding: 5rem 0;
+        }
+        .text-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .text-content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .text-content-grid img {
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .pricing-section {
+            padding: 5rem 0;
+            background-color: var(--color-gray-50);
+        }
+        .pricing-table {
+            width: 100%;
+            max-width: 56rem;
+            margin: 0 auto;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        .pricing-table th, .pricing-table td {
+            padding: 1rem;
+        }
+        .pricing-table thead {
+            background-color: var(--color-gray-200);
+        }
+        .pricing-table th {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .pricing-table .table-section-header td {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            font-weight: 700;
+        }
+        .pricing-table tbody tr {
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+        .packs-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .packs-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 768px) {
+            .packs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .packs-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .pack-card {
+            background-color: var(--color-white);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .pack-card h4 {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--color-primary);
+        }
+        .pack-card .price {
+            font-size: 2.25rem;
+            font-weight: 700;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        .pack-card .session-text {
+            font-size: 0.875rem;
+            color: var(--color-secondary);
+        }
+        .cta-section {
+            padding: 5rem 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .cta-section .btn {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+         .cta-section .btn:hover {
+            background-color: var(--color-gray-100);
+        }
+    </style>
 </head>
 
-<body class="bg-white font-sans text-gray-800">
+<body>
 
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="h-[60vh] relative flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/images/facial (2).webp');">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="relative z-10 container mx-auto px-6 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Tecnología Láser Avanzada</h1>
-                <p class="text-lg md:text-xl mt-4 font-light max-w-2xl mx-auto">Consigue una piel suave, sin vello y visiblemente rejuvenecida con nuestros tratamientos de última generación.</p>
+        <section class="hero page-hero" style="background-image: url('/assets/images/facial (2).webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">Tecnología Láser Avanzada</h1>
+                    <p class="hero-subtitle">Consigue una piel suave, sin vello y visiblemente rejuvenecida con nuestros tratamientos de última generación.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-4">Depilación Láser Diodo</h2>
-                    <p class="text-secondary leading-relaxed mb-4">Nuestra tecnología de láser diodo ofrece una solución eficaz y segura para la eliminación permanente del vello. Es un método rápido, preciso y apto para diferentes tipos de piel, garantizando resultados visibles desde las primeras sesiones.</p>
-                    <h3 class="text-2xl font-bold mt-8 mb-4">Fotorejuvenecimiento Facial</h3>
-                    <p class="text-secondary leading-relaxed">Este procedimiento no invasivo utiliza la luz para conseguir una piel más luminosa, reducir arrugas, manchas e imperfecciones. Fomenta la producción de colágeno y elastina para un aspecto rejuvenecido, ralentizando el proceso de envejecimiento.</p>
+        <section class="text-section">
+            <div class="container">
+                <div class="text-content-grid">
+                    <div>
+                        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Depilación Láser Diodo</h2>
+                        <p style="color: var(--color-secondary); line-height: 1.7; margin-bottom: 1rem;">Nuestra tecnología de láser diodo ofrece una solución eficaz y segura para la eliminación permanente del vello. Es un método rápido, preciso y apto para diferentes tipos de piel, garantizando resultados visibles desde las primeras sesiones.</p>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">Fotorejuvenecimiento Facial</h3>
+                        <p style="color: var(--color-secondary); line-height: 1.7;">Este procedimiento no invasivo utiliza la luz para conseguir una piel más luminosa, reducir arrugas, manchas e imperfecciones. Fomenta la producción de colágeno y elastina para un aspecto rejuvenecido, ralentizando el proceso de envejecimiento.</p>
+                    </div>
+                    <img src="/assets/images/facial (4).webp" alt="Tratamiento láser en Belligood">
                 </div>
-                <img src="/assets/images/facial (4).webp" alt="Tratamiento láser en Belligood" class="rounded-lg shadow-xl w-full h-full object-cover">
             </div>
         </section>
 
-        <section id="precios-laser" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-800">Tarifas y Packs</h2>
-                    <p class="text-secondary mt-3 text-lg">Elige la opción que mejor se adapte a ti.</p>
-                </div>
+        <section id="precios-laser" class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Tarifas y Packs</h2>
+                <p class="section-subtitle">Elige la opción que mejor se adapte a ti.</p>
 
-                <div class="overflow-x-auto">
-                    <table class="w-full max-w-4xl mx-auto text-left border-collapse">
-                        <thead class="bg-gray-200">
+                <div style="overflow-x: auto;">
+                    <table class="pricing-table">
+                        <thead>
                             <tr>
-                                <th class="p-4 font-bold uppercase">Zona</th>
-                                <th class="p-4 font-bold uppercase text-center">1 Sesión</th>
-                                <th class="p-4 font-bold uppercase text-center">4 Sesiones</th>
-                                <th class="p-4 font-bold uppercase text-center">8 Sesiones</th>
+                                <th>Zona</th>
+                                <th style="text-align: center;">1 Sesión</th>
+                                <th style="text-align: center;">4 Sesiones</th>
+                                <th style="text-align: center;">8 Sesiones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b"><td colspan="4" class="p-3 bg-primary text-white font-bold">ZONA PEQUEÑA</td></tr>
-                            <tr class="border-b"><td class="p-3">Labio Superior / Entrecejo / Mentón / Manos / Pies / Nuca / Línea Alba</td><td class="p-3 text-center">15€</td><td class="p-3 text-center">50€</td><td class="p-3 text-center">90€</td></tr>
-                            <tr class="border-b"><td class="p-3">Axilas / Ingles</td><td class="p-3 text-center">20€</td><td class="p-3 text-center">75€</td><td class="p-3 text-center">140€</td></tr>
-                            <tr class="border-b"><td colspan="4" class="p-3 bg-primary text-white font-bold">ZONA MEDIANA</td></tr>
-                            <tr class="border-b"><td class="p-3">Medios Brazos / Glúteos / Pecho / Abdomen / Dorsal</td><td class="p-3 text-center">30€</td><td class="p-3 text-center">100€</td><td class="p-3 text-center">190€</td></tr>
-                            <tr class="border-b"><td colspan="4" class="p-3 bg-primary text-white font-bold">ZONA GRANDE</td></tr>
-                            <tr class="border-b"><td class="p-3">Brazos / Piernas Enteras / Espalda / Tórax</td><td class="p-3 text-center">50€-70€</td><td class="p-3 text-center">170€-250€</td><td class="p-3 text-center">320€-470€</td></tr>
+                            <tr class="table-section-header"><td colspan="4">ZONA PEQUEÑA</td></tr>
+                            <tr><td>Labio Superior / Entrecejo / Mentón / Manos / Pies / Nuca / Línea Alba</td><td style="text-align: center;">15€</td><td style="text-align: center;">50€</td><td style="text-align: center;">90€</td></tr>
+                            <tr><td>Axilas / Ingles</td><td style="text-align: center;">20€</td><td style="text-align: center;">75€</td><td style="text-align: center;">140€</td></tr>
+                            <tr class="table-section-header"><td colspan="4">ZONA MEDIANA</td></tr>
+                            <tr><td>Medios Brazos / Glúteos / Pecho / Abdomen / Dorsal</td><td style="text-align: center;">30€</td><td style="text-align: center;">100€</td><td style="text-align: center;">190€</td></tr>
+                            <tr class="table-section-header"><td colspan="4">ZONA GRANDE</td></tr>
+                            <tr><td>Brazos / Piernas Enteras / Espalda / Tórax</td><td style="text-align: center;">50€-70€</td><td style="text-align: center;">170€-250€</td><td style="text-align: center;">320€-470€</td></tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="text-center mt-16">
-                    <h3 class="text-3xl font-bold text-gray-800">Packs Especiales para Ella</h3>
-                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        <div class="bg-white p-6 rounded-lg shadow-lg"><h4 class="font-bold text-lg text-primary">PACK WOMEN 1</h4><p>4 Sesiones Piernas completas + Ingles completas + Línea alba + Labio + Axilas</p><span class="text-3xl font-bold block mt-2">89€</span><p class="text-sm text-secondary">por sesión</p></div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg"><h4 class="font-bold text-lg text-primary">PACK WOMEN 2</h4><p>4 Sesiones Ingles completas + Axilas</p><span class="text-3xl font-bold block mt-2">34€</span><p class="text-sm text-secondary">por sesión</p></div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg"><h4 class="font-bold text-lg text-primary">PACK WOMEN 5</h4><p>4 Sesiones Cuerpo Completo (Máx. 7 zonas)</p><span class="text-3xl font-bold block mt-2">129€</span><p class="text-sm text-secondary">por sesión</p></div>
+                <div class="packs-section">
+                    <h3 style="font-size: 2rem; font-weight: 700; color: var(--color-gray-800);">Packs Especiales para Ella</h3>
+                    <div class="packs-grid">
+                        <div class="pack-card"><h4>PACK WOMEN 1</h4><p>4 Sesiones Piernas completas + Ingles completas + Línea alba + Labio + Axilas</p><span class="price">89€</span><p class="session-text">por sesión</p></div>
+                        <div class="pack-card"><h4>PACK WOMEN 2</h4><p>4 Sesiones Ingles completas + Axilas</p><span class="price">34€</span><p class="session-text">por sesión</p></div>
+                        <div class="pack-card"><h4>PACK WOMEN 5</h4><p>4 Sesiones Cuerpo Completo (Máx. 7 zonas)</p><span class="price">129€</span><p class="session-text">por sesión</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-primary">
-            <div class="container mx-auto px-6 text-center text-white">
-                <h2 class="text-3xl font-bold mb-4">Di adiós al vello para siempre</h2>
-                <p class="mb-8 text-lg max-w-2xl mx-auto">Nuestros especialistas te asesorarán para encontrar el tratamiento perfecto para ti. ¡Pide tu cita de valoración!</p>
-                <a href="/contacto" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform hover:scale-105 inline-block">Informarme Ahora</a>
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="hero-title" style="font-size: 2rem; color: white;">Di adiós al vello para siempre</h2>
+                <p class="hero-subtitle" style="color: white;">Nuestros especialistas te asesorarán para encontrar el tratamiento perfecto para ti. ¡Pide tu cita de valoración!</p>
+                <a href="/contacto" class="btn">Informarme Ahora</a>
             </div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110"><i class="fab fa-whatsapp fa-2x"></i></a>
+    <a href="https://wa.me/34659306394" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
 
     <script src="/assets/js/main.js"></script>
 </body>

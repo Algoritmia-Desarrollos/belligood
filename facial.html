@@ -9,108 +9,189 @@
     <meta name="keywords" content="limpieza facial móstoles, dermapen, radiofrecuencia facial, tratamiento acné, microdermoabrasión, belligood">
     
     <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
-    <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#f5a5c0',
-                        'secondary': '#979694',
-                    },
-                    fontFamily: {
-                        'sans': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        /* Estilos específicos para esta página */
+        .page-hero {
+            height: 60vh;
+        }
+        .treatments-section {
+            padding: 5rem 0;
+        }
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .treatments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .facial-treatments-list .treatment-item {
+            font-size: 1.125rem;
+            color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .facial-treatments-list .treatment-item i {
+            margin-right: 0.75rem;
+            color: var(--color-primary);
+        }
+        .facial-images-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .facial-images-grid img {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+        .facial-images-grid .grid-span-2 {
+            grid-column: span 2;
+        }
+        .benefits-section {
+            padding: 5rem 0;
+            background-color: var(--color-gray-50);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .benefit-item {
+            text-align: center;
+        }
+        .benefit-item i {
+            font-size: 2.25rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .benefit-item p {
+            color: var(--color-secondary);
+        }
+        .cta-section {
+            padding: 5rem 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .cta-section .btn {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+        .cta-section .btn:hover {
+            background-color: var(--color-gray-100);
+        }
+    </style>
 </head>
 
-<body class="bg-white font-sans text-gray-800">
+<body>
 
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="h-[60vh] relative flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/images/facial (3).webp');">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="relative z-10 container mx-auto px-6 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Renueva y Revitaliza tu Piel</h1>
-                <p class="text-lg md:text-xl mt-4 font-light max-w-2xl mx-auto">Descubre el tratamiento facial perfecto para ti y luce un rostro radiante y saludable.</p>
+        <section class="hero page-hero" style="background-image: url('/assets/images/facial (3).webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">Renueva y Revitaliza tu Piel</h1>
+                    <p class="hero-subtitle">Descubre el tratamiento facial perfecto para ti y luce un rostro radiante y saludable.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800">Nuestros Tratamientos Faciales</h2>
-                    <p class="text-secondary mt-3 text-lg">Tecnología de vanguardia y productos de alta calidad para el cuidado de tu rostro.</p>
-                </div>
+        <section class="treatments-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Tratamientos Faciales</h2>
+                <p class="section-subtitle">Tecnología de vanguardia y productos de alta calidad para el cuidado de tu rostro.</p>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="max-w-xl mx-auto">
-                        <ul class="space-y-4 text-secondary text-lg">
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Limpieza Facial Profunda</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Tratamiento de Hidratación Intensiva</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Tratamiento Específico para Acné</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Tratamiento de Alta Frecuencia</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Radiofrecuencia Facial (Lifting sin cirugía)</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Dermapen (Terapia de inducción de colágeno)</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Oxigenoterapia</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Maderoterapia Facial</li>
-                            <li class="flex items-center"><i class="fas fa-dot-circle mr-3 text-primary"></i>Microdermoabrasión con Punta de Diamante</li>
+                <div class="treatments-grid">
+                    <div class="facial-treatments-list">
+                        <ul>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Limpieza Facial Profunda</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Tratamiento de Hidratación Intensiva</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Tratamiento Específico para Acné</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Tratamiento de Alta Frecuencia</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Radiofrecuencia Facial (Lifting sin cirugía)</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Dermapen (Terapia de inducción de colágeno)</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Oxigenoterapia</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Maderoterapia Facial</li>
+                            <li class="treatment-item"><i class="fas fa-dot-circle"></i>Microdermoabrasión con Punta de Diamante</li>
                         </ul>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="/assets/images/facial (1).webp" alt="Maderoterapia Facial en Belligood" class="rounded-lg shadow-lg object-cover w-full h-full aspect-square">
-                        <img src="/assets/images/facial (4).webp" alt="Tratamiento facial profesional" class="rounded-lg shadow-lg object-cover w-full h-full aspect-square">
-                        <img src="/assets/images/facial (2).webp" alt="Tecnología facial avanzada" class="rounded-lg shadow-lg object-cover w-full h-full aspect-square col-span-2">
+                    <div class="facial-images-grid">
+                        <img src="/assets/images/facial (1).webp" alt="Maderoterapia Facial en Belligood">
+                        <img src="/assets/images/facial (4).webp" alt="Tratamiento facial profesional">
+                        <img src="/assets/images/facial (2).webp" alt="Tecnología facial avanzada" class="grid-span-2">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-10">Beneficios de Cuidar tu Piel con Nosotros</h2>
-                <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-                    <div class="text-center">
-                        <i class="fas fa-award fa-3x text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Resultados Visibles</h3>
-                        <p class="text-secondary">Tratamientos efectivos que mejoran la textura, luminosidad y salud general de tu piel desde la primera sesión.</p>
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Beneficios de Cuidar tu Piel con Nosotros</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Resultados Visibles</h3>
+                        <p>Tratamientos efectivos que mejoran la textura, luminosidad y salud general de tu piel desde la primera sesión.</p>
                     </div>
-                    <div class="text-center">
-                        <i class="fas fa-user-check fa-3x text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Diagnóstico Personalizado</h3>
-                        <p class="text-secondary">Evaluamos las necesidades únicas de tu piel para recomendarte el tratamiento más adecuado y eficaz para ti.</p>
+                    <div class="benefit-item">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Diagnóstico Personalizado</h3>
+                        <p>Evaluamos las necesidades únicas de tu piel para recomendarte el tratamiento más adecuado y eficaz para ti.</p>
                     </div>
-                    <div class="text-center">
-                        <i class="fas fa-hand-holding-heart fa-3x text-primary mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Relajación y Bienestar</h3>
-                        <p class="text-secondary">Cada tratamiento es una experiencia de relajación en un ambiente tranquilo y profesional diseñado para tu confort.</p>
+                    <div class="benefit-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Relajación y Bienestar</h3>
+                        <p>Cada tratamiento es una experiencia de relajación en un ambiente tranquilo y profesional diseñado para tu confort.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section class="py-20 bg-primary">
-            <div class="container mx-auto px-6 text-center text-white">
-                <h2 class="text-3xl font-bold mb-4">¿Quieres lucir una piel radiante?</h2>
-                <p class="mb-8 text-lg max-w-2xl mx-auto">Nuestros expertos en cuidado facial están listos para asesorarte. ¡Da el primer paso hacia la piel que siempre has deseado!</p>
-                <a href="/contacto" class="bg-white text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform hover:scale-105 inline-block">Solicitar Diagnóstico</a>
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="hero-title" style="font-size: 2rem; color: white;">¿Quieres lucir una piel radiante?</h2>
+                <p class="hero-subtitle" style="color: white;">Nuestros expertos en cuidado facial están listos para asesorarte. ¡Da el primer paso hacia la piel que siempre has deseado!</p>
+                <a href="/contacto" class="btn">Solicitar Diagnóstico</a>
             </div>
         </section>
     </main>
 
    <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110"><i class="fab fa-whatsapp fa-2x"></i></a>
+    <a href="https://wa.me/34659306394" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
 
     <script src="/assets/js/main.js"></script>
 </body>

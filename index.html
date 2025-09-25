@@ -11,164 +11,120 @@
 
     <link rel="icon" href="/assets/images/favicon.webp" type="image/webp">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 
-                        'primary': '#f5a5c0', 
-                        'secondary': '#888888',
-                        'light-pink': '#FFF8FB',
-                        'dark-text': '#333333'
-                    },
-                    fontFamily: { 
-                        'sans': ['Poppins', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
-<body class="bg-white font-sans text-dark-text">
+<body>
 
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="h-[85vh] relative flex flex-col bg-cover bg-center" style="background-image: url('/assets/images/local (2).webp');">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            
-            <div class="flex-grow flex items-center justify-center relative z-10">
-                <div class="text-center text-white">
-                    <h1 class="text-5xl md:text-7xl font-serif font-medium mb-4 tracking-tight leading-tight">Belleza y Cuidado Profesional</h1>
-                    <p class="text-lg md:text-xl mb-10 font-light max-w-3xl mx-auto">Un servicio delicado y profesional en el corazón de Móstoles</p>
-                    <a href="#servicios" class="text-lg py-3 px-8 rounded-md font-bold transition-all duration-300 border-2 bg-primary border-primary text-white hover:bg-transparent hover:text-white">NUESTROS SERVICIOS</a>
+        <section class="hero" style="background-image: url('/assets/images/local (2).webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">Belleza y Cuidado Profesional</h1>
+                    <p class="hero-subtitle">Un servicio delicado y profesional en el corazón de Móstoles.</p>
+                    <a href="#servicios" class="btn btn-primary">NUESTROS SERVICIOS</a>
                 </div>
             </div>
         </section>
 
-        <section id="servicios" class="py-24 bg-light-pink">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-dark-text">Nuestros Tratamientos</h2>
-                    <p class="text-secondary mt-4 text-lg max-w-2xl mx-auto">Descubre un mundo de cuidado y belleza. Cada servicio está pensado para ti, para realzar lo mejor de tu esencia.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                    <a href="/unas" class="group relative rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 h-96">
-                        <img src="/assets/images/uñas (6).webp" alt="Manicura Profesional" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-end p-6 text-white text-center">
-                            <h3 class="text-3xl font-bold transition-opacity duration-300 group-hover:opacity-0">Uñas</h3>
-                            <div class="opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <h3 class="text-2xl font-bold mb-2">Manicura y Pedicura</h3>
-                                <p class="mb-4">Tus manos y pies lucirán impecables con nuestros acabados perfectos y duraderos.</p>
-                                <span class="bg-white text-primary font-semibold py-2 px-5 rounded-full">Ver más</span>
-                            </div>
-                        </div>
-                    </a>
-                     <a href="/laser" class="group relative rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 h-96">
-                        <img src="/assets/images/facial (4).webp" alt="Depilación Láser Diodo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-end p-6 text-white text-center">
-                            <h3 class="text-3xl font-bold transition-opacity duration-300 group-hover:opacity-0">Láser</h3>
-                            <div class="opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <h3 class="text-2xl font-bold mb-2">Depilación Láser</h3>
-                                <p class="mb-4">Consigue una piel suave y sin vello de forma definitiva con nuestra tecnología avanzada.</p>
-                                <span class="bg-white text-primary font-semibold py-2 px-5 rounded-full">Ver más</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/facial" class="group relative rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 h-96">
-                        <img src="/assets/images/facial (1).webp" alt="Tratamiento Facial Profesional" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-end p-6 text-white text-center">
-                            <h3 class="text-3xl font-bold transition-opacity duration-300 group-hover:opacity-0">Facial</h3>
-                            <div class="opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <h3 class="text-2xl font-bold mb-2">Cuidado Facial</h3>
-                                <p class="mb-4">Revitaliza tu rostro con tratamientos que limpian, hidratan y rejuvenecen tu piel.</p>
-                                <span class="bg-white text-primary font-semibold py-2 px-5 rounded-full">Ver más</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+        <section id="servicios" class="services-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros Tratamientos</h2>
+                <p class="section-subtitle">Descubre un mundo de cuidado y belleza. Cada servicio está pensado para ti, para realzar lo mejor de tu esencia.</p>
                 
-                <div class="flex flex-wrap justify-center gap-8">
-                    <a href="/corporal" class="group relative rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 h-96 w-full md:w-auto md:flex-1 max-w-md">
-                        <img src="/assets/images/corporal (2).webp" alt="Tratamientos Corporales" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-end p-6 text-white text-center">
-                            <h3 class="text-3xl font-bold transition-opacity duration-300 group-hover:opacity-0">Corporal</h3>
-                            <div class="opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <h3 class="text-2xl font-bold mb-2">Cuidado Corporal</h3>
-                                <p class="mb-4">Relaja tu cuerpo y remodela tu figura con nuestras técnicas manuales y aparatología.</p>
-                                <span class="bg-white text-primary font-semibold py-2 px-5 rounded-full">Ver más</span>
+                <div class="services-grid">
+                    <a href="/unas" class="service-card">
+                        <img src="/assets/images/uñas (6).webp" alt="Manicura Profesional">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title-simple">Uñas</h3>
+                            <div class="service-card-details">
+                                <h3>Manicura y Pedicura</h3>
+                                <p>Tus manos y pies lucirán impecables con nuestros acabados perfectos y duraderos.</p>
+                                <span class="btn-details">Ver más</span>
                             </div>
                         </div>
                     </a>
-                    <a href="/pestanas" class="group relative rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 h-96 w-full md:w-auto md:flex-1 max-w-md">
-                        <img src="/assets/images/facial (3).webp" alt="Tratamiento de Pestañas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-end p-6 text-white text-center">
-                            <h3 class="text-3xl font-bold transition-opacity duration-300 group-hover:opacity-0">Pestañas</h3>
-                            <div class="opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <h3 class="text-2xl font-bold mb-2">Pestañas de Impacto</h3>
-                                <p class="mb-4">Intensifica tu mirada con nuestros servicios de lifting y extensiones de pestañas.</p>
-                                <span class="bg-white text-primary font-semibold py-2 px-5 rounded-full">Ver más</span>
+                    <a href="/laser" class="service-card">
+                        <img src="/assets/images/facial (4).webp" alt="Depilación Láser Diodo">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title-simple">Láser</h3>
+                            <div class="service-card-details">
+                                <h3>Depilación Láser</h3>
+                                <p>Consigue una piel suave y sin vello de forma definitiva con nuestra tecnología avanzada.</p>
+                                <span class="btn-details">Ver más</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/facial" class="service-card">
+                        <img src="/assets/images/facial (1).webp" alt="Tratamiento Facial Profesional">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title-simple">Facial</h3>
+                            <div class="service-card-details">
+                                <h3>Cuidado Facial</h3>
+                                <p>Revitaliza tu rostro con tratamientos que limpian, hidratan y rejuvenecen tu piel.</p>
+                                <span class="btn-details">Ver más</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/corporal" class="service-card">
+                        <img src="/assets/images/corporal (2).webp" alt="Tratamientos Corporales">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title-simple">Corporal</h3>
+                            <div class="service-card-details">
+                                <h3>Cuidado Corporal</h3>
+                                <p>Relaja tu cuerpo y remodela tu figura con nuestras técnicas manuales y aparatología.</p>
+                                <span class="btn-details">Ver más</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/pestanas" class="service-card">
+                        <img src="/assets/images/facial (3).webp" alt="Tratamiento de Pestañas">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title-simple">Pestañas</h3>
+                            <div class="service-card-details">
+                                <h3>Pestañas de Impacto</h3>
+                                <p>Intensifica tu mirada con nuestros servicios de lifting y extensiones de pestañas.</p>
+                                <span class="btn-details">Ver más</span>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <section id="nosotros" class="py-24 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <img src="/assets/images/local (1).webp" alt="Interior del centro de estética Belligood" class="rounded-lg shadow-xl w-full">
-                </div>
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Bienvenida a <span class="text-primary">Belligood</span></h2>
-                    <p class="text-secondary mb-5 text-lg leading-relaxed">Más que un centro de estética, somos un refugio moderno y acogedor donde cada detalle está pensado para tu bienestar. Nuestra pasión es cuidarte, utilizando productos de alta calidad y un equipo profesional que te hará sentir como en casa.</p>
-                    <p class="text-secondary leading-relaxed text-lg">Nuestra misión es que te sientas y te veas espectacular. Te invitamos a descubrir una experiencia de belleza única y personalizada.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" class="py-24 bg-light-pink">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl md:text-5xl font-bold text-dark-text mb-16">Un Vistazo a Nuestro Arte</h2>
-                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="overflow-hidden rounded-lg shadow-md"><img src="/assets/images/uñas (4).webp" alt="Trabajo de manicura Belligood" class="w-full h-full object-cover aspect-square transform hover:scale-110 transition-transform duration-300"></div>
-                    <div class="overflow-hidden rounded-lg shadow-md"><img src="/assets/images/corporal (1).webp" alt="Tratamiento corporal Belligood" class="w-full h-full object-cover aspect-square transform hover:scale-110 transition-transform duration-300"></div>
-                    <div class="overflow-hidden rounded-lg shadow-md"><img src="/assets/images/uñas (5).webp" alt="Diseño de uñas Belligood" class="w-full h-full object-cover aspect-square transform hover:scale-110 transition-transform duration-300"></div>
-                    <div class="overflow-hidden rounded-lg shadow-md"><img src="/assets/images/facial (2).webp" alt="Tratamiento facial Belligood" class="w-full h-full object-cover aspect-square transform hover:scale-110 transition-transform duration-300"></div>
-                 </div>
-                 <a href="/galeria" class="mt-12 inline-block text-lg py-3 px-8 rounded-md font-bold transition-all duration-300 border-2 bg-primary border-primary text-white hover:bg-transparent hover:text-primary">Explora la Galería Completa</a>
             </div>
         </section>
         
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                 <h2 class="section-title">Un Vistazo a Nuestro Arte</h2>
+                 <div class="gallery-grid">
+                    <div class="gallery-item"><img src="/assets/images/uñas (4).webp" alt="Trabajo de manicura Belligood"></div>
+                    <div class="gallery-item"><img src="/assets/images/corporal (1).webp" alt="Tratamiento corporal Belligood"></div>
+                    <div class="gallery-item"><img src="/assets/images/uñas (5).webp" alt="Diseño de uñas Belligood"></div>
+                    <div class="gallery-item"><img src="/assets/images/facial (2).webp" alt="Tratamiento facial Belligood"></div>
+                 </div>
+                 <div class="gallery-button-container">
+                    <a href="/galeria" class="btn btn-primary">Explora la Galería Completa</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/34659306394" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-transform hover:scale-110 z-40">
+    <a href="https://wa.me/34659306394" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp fa-2x"></i>
     </a>
 
